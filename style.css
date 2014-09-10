@@ -1,0 +1,25 @@
+body{
+    background-color: #242424;
+}
+
+.time{
+    background-color: #333333;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 16%;
+
+
+    
+}
+.debug{
+    color: white;
+    position:fixed;
+    z-index:9999;
+    background-color: gray;
+}
+.label{
+    position: fixed;
+    color: white;
+    bottom:2%;
+}
