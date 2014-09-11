@@ -19,8 +19,7 @@ $(document).ready(function () {
         for(var k = 0; k < size; k++){
             if(String(time).split("").length != size)
             secondsfirst = String(time).split("")[size-String(time).split("").length-k];
-            else
-             secondsfirst = String(time).split("")[k];
+            else secondsfirst = String(time).split("")[k];
 
             secondsfirst = (parseInt(secondsfirst, 10).toString(2));
             title += "(" + secondsfirst + ")," ;
@@ -34,10 +33,11 @@ $(document).ready(function () {
             
             for (i = 0; i < 4; i++) { 
                    var $object = $("#"+name+ "-"+ k + "-"+ (3-i));
-                 if(secondsfirst[i]=="1"){
+                  console.log($object.css("background-color"));
+                 if(secondsfirst[i]=="1" && $object.css("background-color") == "rgb(51, 51, 51)"){
                      $object.velocity("transition.bounceIn");
                      $object.css("background-color", "#00FF2F");
-                 }else{
+                 }else if(secondsfirst[i] !="1" && $object.css("background-color") != "rgb(51, 51, 51)" ){
                      $object.css("background-color", "#333333");
                  }
              }
@@ -68,9 +68,9 @@ $(document).ready(function () {
                 offset++;
                 labelset++;
             }
-           // $(".labels").append("<div class='label label"+name+"'>"+name.capitalize()+"</div>");
-           // $(".label" + name).css("left", (width * (offset-labelset) + labelset/2*width/1.5 + width / 5.5 ) + "%");
-
+           $(".labels").append("<div class='label label"+name+"'>"+name.capitalize()+"</div>");
+           $(".label" + name).css("left", ((width * size + width/5.5 )   - $(".label" + name).width()/100) + "%");
+            
             $(".debug").append("<div class='"+name+"'></div>");
         }
         return true;
@@ -95,4 +95,3 @@ $(document).ready(function () {
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
-

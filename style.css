@@ -19,7 +19,14 @@ body{
     background-color: gray;
 }
 .label{
+    display: block;
     position: fixed;
     color: white;
     bottom:2%;
+}
+.labels {
+    width: 1px; /* Or zero, or something very small */
+    margin: auto;
+    overflow: visible;
+    background: red; /* A color just for debug */
 }
