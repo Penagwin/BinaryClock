@@ -68,8 +68,8 @@ $(document).ready(function () {
                 offset++;
                 labelset++;
             }
-           $(".labels").append("<div class='label label"+name+"'>"+name.capitalize()+"</div>");
-           $(".label" + name).css("left", ((width * size + width/5.5 )   - $(".label" + name).width()/100) + "%");
+           //$(".labels").append("<div class='label label"+name+"'>"+name.capitalize()+"</div>");
+           //$(".label" + name).css("left", ((width * size + width/5.5 )   - $(".label" + name).width()/100) + "%");
             
             $(".debug").append("<div class='"+name+"'></div>");
         }
